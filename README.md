@@ -1,6 +1,6 @@
 # Population
 
-The idea of the project is to show how a computer can do large amounts of data for us. We are using a free zipcode database from this [site](http://federalgovernmentzipcodes.us/).
+The idea of the project is to show how a computer can do large amounts of data for us. We are using a free zipcode database from this [site](http://federalgovernmentzipcodes.us/). The population data is old (2008).
 
 There are a few parts to this script.
 

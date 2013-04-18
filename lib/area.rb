@@ -21,11 +21,13 @@ class Area
   attr_accessor :notes
      
   def initialize(hash)
-    @zipcode = hash[:Zipcode] || "n/a"
-    @estimated_population = hash[:EstimatedPopulation] || 0
+    @zipcode = hash[:zipcode].to_i || 0
+    @estimated_population = hash[:estimated_population].to_i || 0
+    @city = hash[:city] || "n/a"
+    @state = hash[:state] || "n/a"
   end
 
   def to_s
-    "#{zipcode} has #{estimated_population} people"
+    "#{city}, #{state} #{zipcode} has #{estimated_population} people"
   end
 end

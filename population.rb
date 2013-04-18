@@ -6,7 +6,7 @@ class Population
   attr_accessor :analytics
 
   def initialize
-    areas = Setup.new(true).areas
+    areas = Setup.new().areas
     @analytics = Analytics.new(areas)
   end
 
@@ -18,6 +18,7 @@ class Population
     puts "3. Largest Population"
     puts "4. How many zips in California"
     puts "5. Information for a given zip"
+    puts "6. Exit"
   end
 
   def run
@@ -43,6 +44,16 @@ class Population
   def run_analytics(choice)
     if choice == 1
       @analytics.how_many
+    elsif choice == 2
+      @analytics.smallest_pop
+    elsif choice == 3
+      @analytics.largest_pop
+    elsif choice == 4
+      @analytics.california_zips
+    elsif choice == 5
+      print "Which zip? "
+      zip = gets.strip.to_i
+      @analytics.zip_info(zip)
     else
       return true
     end
