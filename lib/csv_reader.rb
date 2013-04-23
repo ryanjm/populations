@@ -34,8 +34,6 @@ class CSVReader
     end
   end
 
-  # TODO: create method to convert cammelCase to snake_case
-
   def create_hash(values)
     h = {}
     @headers.each_with_index do |header, i|
